@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Topshiriq 2</title>
+    <style>
+        #marshrut {
+            padding: 8px 20px;
+            font-size: 17px;
+            text-align: center;
+            margin-left: 10px;
+            border-radius: 5px;
+            
+            
+            }
+        #marshrut:hover{
+            cursor: pointer;
+            background-color:  crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="marshrut"> Avtobusni tanlang </label>
+    <select id="marshrut">
+        <option value="">tanlang</option>
+        <option value="Qo’yliq">Qo’yliq</option>
+        <option value="Chorsu">Chorsu</option>
+        <option value="Oloy">Oloy</option>
+    </select>
+
+    <p></p>
+
+    <script>
+        const select = document.querySelector('select');
+        const para = document.querySelector('p');
+
+        select.onchange = choiseLocation;
+
+        function choiseLocation() {
+            const choice = select.value;
+
+            if (choice === 'Qo’yliq') {
+               para.textContent = '7, 93';
+            } else if (choice === 'Chorsu') {
+               para.textContent = '3, 54, 12';
+            } else if (choice === 'Oloy') {
+               para.textContent = '434, 5545, 11111';
+            } else {
+                para.textContent = '';
+            }
+        }
+    </script>
+</body>
+</html>

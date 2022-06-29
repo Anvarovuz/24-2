@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>topshiriq 5</title>
+    <style>
+        input{
+    width: 20%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+function hisob(uchburchak) {
+let a=1*uchburchak.burchak1.value;
+let b=1*uchburchak.burchak2.value;
+let c=1*uchburchak.burchak3.value;
+let p=(a+b+c)/2;
+let s=Math.sqrt(p*(p-a)*(p-b)*(p-c));
+s=s.toFixed(2);
+uchburchak.javob.value=s;
+}
+</script>
+<form name="myform">
+<h3>Uchburchak tomonlarini yozing</h3>
+<h3>a burchak:</h3> <input type="text" size="10" name="burchak1" placeholder="burchak a"><p>
+<h3>b burchak:</h3> <input type="text" size="10" name="burchak2" placeholder="burchak b"><p>
+<h3>c burchak:</h3> <input type="text" size="10" name="burchak3" placeholder="burchak c"><p>
+<input type="button" value="Hisoblash" onclick="hisob(myform)">
+<input type="reset" value="O'chirish"><p>
+<h3>Uchburchak yuzasi</h3> <input type="text" size="20" name="javob">
+</form>
+</body>
+</html>
